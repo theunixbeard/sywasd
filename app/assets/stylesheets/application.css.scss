@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+// Color Scheme
+// kuler.adobe.com/sywasd-color-theme-3991196
+$color1: #E9BD79; // bg image color approx (drk brn)
+$color2: #FFD99E; // light brown
+$color3: #FFCF84; // med brown
+$color4: #397CB2; // dark blue
+$color5: #84C8FF; // light blue
+
+// Bootstrap Overrides
+$brand-primary: $color4; //#428bca;
+$brand-success: #5cb85c;
+$brand-info:    $color5;// #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger:  #d9534f;
+// Import Bootstrap
+@import "bootstrap";
+
+.heading-color {
+  color: $gray-lighter;
+}
+
+body {
+  background: #E9BD79 url(bg_patterns/purty_wood.png) repeat;
+}
+.container.main-container {
+  background: $color5;
+  border-radius: 12px;
+}
+.options-picker {
+  border: 4px solid black;
+  border-radius: 12px;
+  background: $color2;
+}
+.desk-display {
+  border: 4px solid black;
+  border-radius: 12px;
+  background: $color3;
+}

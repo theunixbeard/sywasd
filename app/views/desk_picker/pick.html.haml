@@ -1,2 +1,22 @@
-%h1 DeskPicker#pick
-%p Find me in app/views/desk_picker/pick.html.haml
+.row
+  .col-md-6.col-md-offset-3.text-center
+    %h1.heading-color So You Want a Standing Desk?
+.row
+  .col-md-4.options-picker
+    %h3 Preferences
+    %label Your computer
+    .btn-group{:'data-toggle' => "buttons"}
+      %label.btn.btn-default
+        %input#computer-laptop{name: "computer", type: "radio"} Laptop
+      %label.btn.btn-default
+        %input.active#computer-default{name: "computer", type: "radio"} No Preference
+      %label.btn.btn-default
+        %input#computer-desktop{name: "computer", type: "radio"} Desktop
+
+    %p option 1
+    %p option 2
+    %p option 3
+    %button.btn.btn-primary{type: "button"} Primary
+  .col-md-7.col-md-offset-1.desk-display
+    %h3 Your Best Desk
+    %p Find me in app/views/desk_picker/pick.html.haml
