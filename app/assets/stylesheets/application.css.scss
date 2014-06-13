@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require seiyria-bootstrap-slider
  *= require_tree .
  *= require_self
  */
@@ -31,23 +32,45 @@ $brand-danger:  #d9534f;
 @import "bootstrap";
 
 .heading-color {
-  color: $gray-lighter;
+  color: $color4;
 }
 
 body {
   background: #E9BD79 url(bg_patterns/purty_wood.png) repeat;
 }
 .container.main-container {
-  background: $color5;
+  background: white;
   border-radius: 12px;
 }
 .options-picker {
   border: 4px solid black;
-  border-radius: 12px;
+  // border-radius: 12px;
   background: $color2;
 }
 .desk-display {
   border: 4px solid black;
-  border-radius: 12px;
+  // border-radius: 12px;
   background: $color3;
+}
+
+#budget-slider {
+  width: 100%;
+}
+
+.btn.active, .btn:active {
+    background-color: $color5;
+}
+.main-product-image {
+  width: 100%;
+  margin-bottom: 15px;
+}
+/*
+.thumbnail {
+  margin-top: 10px;
+  width: 100%;
+}
+*/
+.price {
+  color: green;
+  font-size: 24px;
 }

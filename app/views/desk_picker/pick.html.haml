@@ -1,22 +1,85 @@
 .row
   .col-md-6.col-md-offset-3.text-center
-    %h1.heading-color So You Want a Standing Desk?
+    %h1.heading-color Standing Desk Search
 .row
   .col-md-4.options-picker
-    %h3 Preferences
-    %label Your computer
-    .btn-group{:'data-toggle' => "buttons"}
-      %label.btn.btn-default
-        %input#computer-laptop{name: "computer", type: "radio"} Laptop
-      %label.btn.btn-default
-        %input.active#computer-default{name: "computer", type: "radio"} No Preference
-      %label.btn.btn-default
-        %input#computer-desktop{name: "computer", type: "radio"} Desktop
-
-    %p option 1
-    %p option 2
-    %p option 3
-    %button.btn.btn-primary{type: "button"} Primary
-  .col-md-7.col-md-offset-1.desk-display
-    %h3 Your Best Desk
-    %p Find me in app/views/desk_picker/pick.html.haml
+    %h2 Preferences
+    %form
+      .form-group
+        %label{for: "ex8"} Price Range
+        %input#ex8{type: "text", data: {:'slider-id' => "budget-slider", :'slider-min' => "0", :'slider-max' => "2000", :'slider-step' => 5, :'slider-value' => "[0,2000]"}}
+      .form-group
+        %label{for: "computer-group"} Your Computer
+        .btn-group.btn-group-justified#computer-group{:'data-toggle' => "buttons"}
+          %label.btn.btn-default.active
+            %input#computer-laptop{name: "computer", type: "radio", checked:""} Laptop
+          %label.btn.btn-default
+            %input#computer-desktop{name: "computer", type: "radio"} Desktop
+      .form-group
+        %label{for: "diy-group"} DIY or Premade
+        .btn-group.btn-group-justified#diy-group{:'data-toggle' => "buttons"}
+          %label.btn.btn-default
+            %input#diy-yes{name: "diy", type: "radio"} DIY
+          %label.btn.btn-default.active
+            %input#diy-no{name: "diy", type: "radio", checked: ""} Premade
+      .form-group
+        %label{for: "converter-group"} Sit-to-Stand-Converter or Full Height Desk
+        .btn-group.btn-group-justified#converter-group{:'data-toggle' => "buttons"}
+          %label.btn.btn-default
+            %input#converter-yes{name: "converter", type: "radio"} Converter
+          %label.btn.btn-default.active
+            %input#converter-no{name: "converter", type: "radio", checked: ""} Full Height
+      .form-group
+        %label{for: "adjustable-group"} Fixed Height or Adjustable Height
+        .btn-group.btn-group-justified#adjustable-group{:'data-toggle' => "buttons"}
+          %label.btn.btn-default
+            %input#adjustable-yes{name: "adjustable", type: "radio"} Fixed Height
+          %label.btn.btn-default.active
+            %input#converter-no{name: "adjustable", type: "radio", checked: ""} Adjustable Height
+      .form-group
+        %label{for: "adjustable-group"} Crank or Electrically Adjustable
+        .btn-group.btn-group-justified#electric-group{:'data-toggle' => "buttons"}
+          %label.btn.btn-default
+            %input#electric-no{name: "electric", type: "radio"} Crank
+          %label.btn.btn-default.active
+            %input#electric-yes{name: "electric", type: "radio", checked: ""} Electric
+  .col-md-8.desk-display
+    %h2 Your Best Desk
+    .row
+      .col-md-6
+        = image_tag "question_mark.jpg", class: "main-product-image"
+        .row
+          .col-md-3
+            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+          .col-md-3
+            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+          .col-md-3
+            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+          .col-md-3
+            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+      .col-md-6
+        %h3 Sample Desk Title
+        %p.price $449.99
+        %p
+          %a{href:"#"}Buy on Amazon
+        %p
+          %a{href:"#"}Buy on sywasd.com
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper nulla id nisi faucibus, nec facilisis ante venenatis. Maecenas ut arcu pharetra, facilisis est ac, egestas mi. Aliquam ut tortor non urna consequat molestie. Ut eget massa vehicula, iaculis nunc eu, elementum orci. Praesent quis nulla eget nulla tincidunt aliquet sed ut enim. Nam condimentum vulputate mi, quis fermentum nibh suscipit at. Etiam euismod nisi et fringilla convallis. Donec ut ante sit amet tortor vehicula luctus. Vivamus faucibus, quam sed eleifend eleifend, tellus tellus sollicitudin purus, nec pretium libero sem id sem.
+        %p Aenean vehicula pretium pharetra. Morbi bibendum, risus eget mattis congue, dui turpis accumsan eros, ut blandit massa arcu eget sem. Pellentesque quis justo venenatis, feugiat mauris quis, pulvinar ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse vel molestie purus, vel sagittis dolor. Nullam posuere malesuada tempor. Aenean blandit nulla eu diam commodo, id sodales sapien fringilla. Etiam eget elementum orci. Vestibulum quis metus ac leo venenatis vestibulum. Maecenas facilisis, augue vel ultrices tincidunt, enim augue vulputate urna, ac ultricies nunc nunc nec lacus. Suspendisse et odio non tellus rhoncus suscipit. Suspendisse at pretium lacus. Fusce mollis turpis elementum magna vehicula, ut varius turpis molestie. Maecenas a congue magna. Vivamus sollicitudin volutpat varius.
+    .row
+      .col-md-3
+        %h5 Other Desk 1
+        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+        %p 1 sentence blurb is what will go where this sample text is
+      .col-md-3
+        %h5 Other Desk 2
+        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+        %p 1 sentence blurb is what will go where this sample text is
+      .col-md-3
+        %h5 Other Desk 3
+        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+        %p 1 sentence blurb is what will go where this sample text is
+      .col-md-3
+        %h5 Other Desk 4
+        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
+        %p 1 sentence blurb is what will go where this sample text is
