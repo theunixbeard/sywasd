@@ -7,6 +7,7 @@
 #= require ember-data
 #= require_self
 #= require sywasd
+#= require_tree .
 
 # for more details see: http://emberjs.com/guides/application/
 window.Sywasd = Ember.Application.create()
