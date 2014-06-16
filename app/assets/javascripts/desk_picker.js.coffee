@@ -10,3 +10,4 @@ ready = ->
   $("#ex8").slider(slider_options)
 
 $(document).ready(ready)
+$(document).on('page:load', ready)
