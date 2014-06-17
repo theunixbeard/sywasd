@@ -1,3 +1,6 @@
+:javascript
+  var desks_raw = "#{escape_javascript @desks}"
+  window.all_desks = $.parseJSON(desks_raw);
 .row
   .col-md-6.col-md-offset-3.text-center
     %h1.heading-color Standing Desk Search
