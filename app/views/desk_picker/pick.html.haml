@@ -7,10 +7,10 @@
 .row
   .col-md-4.options-picker
     %h2 Preferences
-    %form
+    %form#search-form
       .form-group
-        %label{for: "ex8"} Price Range
-        %input#ex8{type: "text", data: {:'slider-id' => "budget-slider", :'slider-min' => "0", :'slider-max' => "2000", :'slider-step' => 5, :'slider-value' => "[0,2000]"}}
+        %label{for: "budget-slider"} Price Range
+        %input#budget-slider{type: "text", data: {:'slider-id' => "budget-slider-input", :'slider-min' => "0", :'slider-max' => "2000", :'slider-step' => 5, :'slider-value' => "[0,2000]"}}
       .form-group
         %label{for: "computer-group"} Your Computer
         .btn-group.btn-group-justified#computer-group{:'data-toggle' => "buttons"}
