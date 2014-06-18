@@ -51,6 +51,7 @@
     .row
       .col-md-6
         = image_tag "question_mark.jpg", class: "main-product-image"
+        = image_tag "question_mark.jpg", class: "main-product-image hide"
         .row
           .col-md-3
             = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
@@ -86,3 +87,11 @@
         %h5 Other Desk 4
         = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
         %p 1 sentence blurb is what will go where this sample text is
+-# BASIC option:
+-# Load all images and have them hidden. 
+-# SOLUTION: 1.) onload event AJAX request, returns image_tag html w/ proper IDs which then can be shown as needed
+-# http://stackoverflow.com/questions/3818063/dont-load-hidden-images
+-# data-src w/ real src, src blank. Then in the background let javascript DL all the images
+-# caching images: http://makandracards.com/makandra/11345-how-to-make-your-application-assets-cachable-in-rails
+= image_tag "question_mark.jpg", class: "main-product-image hide"
+
