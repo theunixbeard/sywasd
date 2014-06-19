@@ -1,6 +1,8 @@
 :javascript
+  // Ruby data -> Javascript
   var desks_raw = "#{escape_javascript @desks}"
   window.all_desks = $.parseJSON(desks_raw);
+  window.default_image_url = "#{request.protocol}#{request.host_with_port}#{asset_path("question_mark.jpg")}"
 .row
   .col-md-6.col-md-offset-3.text-center
     %h1.heading-color Standing Desk Search
@@ -46,47 +48,7 @@
             %input#electric-no{name: "electric", type: "radio"} Crank
           %label.btn.btn-default.active
             %input#electric-yes{name: "electric", type: "radio", checked: ""} Electric
-  .col-md-8.desk-display
-    %h2 Your Best Desk
-    .row
-      .col-md-6
-        = image_tag "question_mark.jpg", class: "main-product-image"
-        = image_tag "question_mark.jpg", class: "main-product-image hide"
-        .row
-          .col-md-3
-            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-          .col-md-3
-            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-          .col-md-3
-            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-          .col-md-3
-            = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-      .col-md-6
-        %h3 Sample Desk Title
-        %p.price $449.99
-        %p
-          %a{href:"#"}Buy on Amazon
-        %p
-          %a{href:"#"}Buy on sywasd.com
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper nulla id nisi faucibus, nec facilisis ante venenatis. Maecenas ut arcu pharetra, facilisis est ac, egestas mi. Aliquam ut tortor non urna consequat molestie. Ut eget massa vehicula, iaculis nunc eu, elementum orci. Praesent quis nulla eget nulla tincidunt aliquet sed ut enim. Nam condimentum vulputate mi, quis fermentum nibh suscipit at. Etiam euismod nisi et fringilla convallis. Donec ut ante sit amet tortor vehicula luctus. Vivamus faucibus, quam sed eleifend eleifend, tellus tellus sollicitudin purus, nec pretium libero sem id sem.
-        %p Aenean vehicula pretium pharetra. Morbi bibendum, risus eget mattis congue, dui turpis accumsan eros, ut blandit massa arcu eget sem. Pellentesque quis justo venenatis, feugiat mauris quis, pulvinar ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse vel molestie purus, vel sagittis dolor. Nullam posuere malesuada tempor. Aenean blandit nulla eu diam commodo, id sodales sapien fringilla. Etiam eget elementum orci. Vestibulum quis metus ac leo venenatis vestibulum. Maecenas facilisis, augue vel ultrices tincidunt, enim augue vulputate urna, ac ultricies nunc nunc nec lacus. Suspendisse et odio non tellus rhoncus suscipit. Suspendisse at pretium lacus. Fusce mollis turpis elementum magna vehicula, ut varius turpis molestie. Maecenas a congue magna. Vivamus sollicitudin volutpat varius.
-    .row
-      .col-md-3
-        %h5 Other Desk 1
-        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-        %p 1 sentence blurb is what will go where this sample text is
-      .col-md-3
-        %h5 Other Desk 2
-        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-        %p 1 sentence blurb is what will go where this sample text is
-      .col-md-3
-        %h5 Other Desk 3
-        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-        %p 1 sentence blurb is what will go where this sample text is
-      .col-md-3
-        %h5 Other Desk 4
-        = link_to image_tag("question_mark.jpg"), "#", {:class => 'thumbnail'}
-        %p 1 sentence blurb is what will go where this sample text is
+  .col-md-8.desk-display#desk-display
 -# BASIC option:
 -# Load all images and have them hidden. 
 -# SOLUTION: 1.) onload event AJAX request, returns image_tag html w/ proper IDs which then can be shown as needed

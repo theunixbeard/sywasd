@@ -15,4 +15,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require seiyria-bootstrap-slider
+//= require handlebars.runtime
+//= require_tree ./templates
 //= require_tree .
+

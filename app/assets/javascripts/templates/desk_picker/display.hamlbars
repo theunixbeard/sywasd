@@ -1,0 +1,48 @@
+%h2 Your Best Desk
+.row
+  .col-md-6
+    %img.main-product-image{hb: "mksrc default_image"}
+    .row
+      .col-md-3
+        %a.thumbnail{href: "#"}
+          %img{hb: "mksrc default_image"}
+      .col-md-3
+        %a.thumbnail{href: "#"}
+          %img{hb: "mksrc default_image"}
+      .col-md-3
+        %a.thumbnail{href: "#"}
+          %img{hb: "mksrc default_image"}
+      .col-md-3
+        %a.thumbnail{href: "#"}
+          %img{hb: "mksrc default_image"}
+  .col-md-6
+    %h3 Sample Desk Title
+    %p.price $449.99
+    %p
+      %a{href:"#"}Buy on Amazon
+    %p
+      %a{href:"#"}Buy on sywasd.com
+    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper nulla id nisi faucibus, nec facilisis ante venenatis. Maecenas ut arcu pharetra, facilisis est ac, egestas mi. Aliquam ut tortor non urna consequat molestie. Ut eget massa vehicula, iaculis nunc eu, elementum orci. Praesent quis nulla eget nulla tincidunt aliquet sed ut enim. Nam condimentum vulputate mi, quis fermentum nibh suscipit at. Etiam euismod nisi et fringilla convallis. Donec ut ante sit amet tortor vehicula luctus. Vivamus faucibus, quam sed eleifend eleifend, tellus tellus sollicitudin purus, nec pretium libero sem id sem.
+    %p Aenean vehicula pretium pharetra. Morbi bibendum, risus eget mattis congue, dui turpis accumsan eros, ut blandit massa arcu eget sem. Pellentesque quis justo venenatis, feugiat mauris quis, pulvinar ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse vel molestie purus, vel sagittis dolor. Nullam posuere malesuada tempor. Aenean blandit nulla eu diam commodo, id sodales sapien fringilla. Etiam eget elementum orci. Vestibulum quis metus ac leo venenatis vestibulum. Maecenas facilisis, augue vel ultrices tincidunt, enim augue vulputate urna, ac ultricies nunc nunc nec lacus. Suspendisse et odio non tellus rhoncus suscipit. Suspendisse at pretium lacus. Fusce mollis turpis elementum magna vehicula, ut varius turpis molestie. Maecenas a congue magna. Vivamus sollicitudin volutpat varius.
+.row
+  .col-md-3
+    %h5 Other Desk 1
+    %a.thumbnail{href: "#"}
+      %img{hb: "mksrc default_image"}
+    %p 1 sentence blurb is what will go where this sample text is
+  .col-md-3
+    %h5 Other Desk 2
+    %a.thumbnail{href: "#"}
+      %img{hb: "mksrc default_image"}
+    %p 1 sentence blurb is what will go where this sample text is
+  .col-md-3
+    %h5 Other Desk 3
+    %a.thumbnail{href: "#"}
+      %img{hb: "mksrc default_image"}
+    %p 1 sentence blurb is what will go where this sample text is
+  .col-md-3
+    %h5 Other Desk 4
+    %a.thumbnail{href: "#"}
+      %img{hb: "mksrc default_image"}
+    %p 1 sentence blurb is what will go where this sample text is
+

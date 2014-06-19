@@ -83,12 +83,22 @@ configure_slider = () ->
   slider_options = {tooltip: 'always'}
   $("#budget-slider").slider(slider_options)
 
+# Setup initial Handlebars Templates
+setup_handlebars = () ->
+  Handlebars.registerHelper 'mksrc', (src_url) ->
+    return "src=" + src_url
+  handlebars_data =
+    default_image: window.default_image_url
+  some_html = HandlebarsTemplates['desk_picker/display'](handlebars_data)
+  $("#desk-display").html(some_html)
+
 # Document Ready
 
 ready = ->
   configure_slider()
   filter_desks()
   wire_up_events()
+  setup_handlebars()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

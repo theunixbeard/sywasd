@@ -41,3 +41,5 @@ gem 'bootstrap-sass', '~> 3.1'
 gem 'rspec-rails'
 gem 'haml-rails'
 gem 'rails-assets-seiyria-bootstrap-slider'
+gem 'handlebars_assets'
+gem 'hamlbars', '~> 2.0' # For use with handlebars_assets
