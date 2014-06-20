@@ -1,48 +1,34 @@
 %h2 Your Best Desk
 .row
   .col-md-6
-    %img.main-product-image{hb: "mksrc default_image"}
+    %img.main-product-image{hb: "mksrc main_desk.images.main"}
     .row
-      .col-md-3
-        %a.thumbnail{href: "#"}
-          %img{hb: "mksrc default_image"}
-      .col-md-3
-        %a.thumbnail{href: "#"}
-          %img{hb: "mksrc default_image"}
-      .col-md-3
-        %a.thumbnail{href: "#"}
-          %img{hb: "mksrc default_image"}
-      .col-md-3
-        %a.thumbnail{href: "#"}
-          %img{hb: "mksrc default_image"}
+      -# TODO: Limit to 4 per row somehow
+      = hb "each main_desk.images.others" do
+        .col-md-3
+          %a.thumbnail{href: "#"}
+            %img{hb: "mksrc this"}
   .col-md-6
-    %h3 Sample Desk Title
-    %p.price $449.99
+    %h3
+      = hb "main_desk.title"
+    %p.price
+      -# TODO: Dollar/cents amount helper
+      = precede "$" do
+        = hb "main_desk.price"
     %p
+      -# TODO: Make these dynamic
       %a{href:"#"}Buy on Amazon
     %p
       %a{href:"#"}Buy on sywasd.com
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper nulla id nisi faucibus, nec facilisis ante venenatis. Maecenas ut arcu pharetra, facilisis est ac, egestas mi. Aliquam ut tortor non urna consequat molestie. Ut eget massa vehicula, iaculis nunc eu, elementum orci. Praesent quis nulla eget nulla tincidunt aliquet sed ut enim. Nam condimentum vulputate mi, quis fermentum nibh suscipit at. Etiam euismod nisi et fringilla convallis. Donec ut ante sit amet tortor vehicula luctus. Vivamus faucibus, quam sed eleifend eleifend, tellus tellus sollicitudin purus, nec pretium libero sem id sem.
-    %p Aenean vehicula pretium pharetra. Morbi bibendum, risus eget mattis congue, dui turpis accumsan eros, ut blandit massa arcu eget sem. Pellentesque quis justo venenatis, feugiat mauris quis, pulvinar ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse vel molestie purus, vel sagittis dolor. Nullam posuere malesuada tempor. Aenean blandit nulla eu diam commodo, id sodales sapien fringilla. Etiam eget elementum orci. Vestibulum quis metus ac leo venenatis vestibulum. Maecenas facilisis, augue vel ultrices tincidunt, enim augue vulputate urna, ac ultricies nunc nunc nec lacus. Suspendisse et odio non tellus rhoncus suscipit. Suspendisse at pretium lacus. Fusce mollis turpis elementum magna vehicula, ut varius turpis molestie. Maecenas a congue magna. Vivamus sollicitudin volutpat varius.
+    %p
+      = hb "main_desk.description"
 .row
-  .col-md-3
-    %h5 Other Desk 1
-    %a.thumbnail{href: "#"}
-      %img{hb: "mksrc default_image"}
-    %p 1 sentence blurb is what will go where this sample text is
-  .col-md-3
-    %h5 Other Desk 2
-    %a.thumbnail{href: "#"}
-      %img{hb: "mksrc default_image"}
-    %p 1 sentence blurb is what will go where this sample text is
-  .col-md-3
-    %h5 Other Desk 3
-    %a.thumbnail{href: "#"}
-      %img{hb: "mksrc default_image"}
-    %p 1 sentence blurb is what will go where this sample text is
-  .col-md-3
-    %h5 Other Desk 4
-    %a.thumbnail{href: "#"}
-      %img{hb: "mksrc default_image"}
-    %p 1 sentence blurb is what will go where this sample text is
-
+  -# TODO: Paginate these
+  = hb "each other_desks" do
+    .col-md-3
+      %h5
+        = hb "this.title"
+      %a.thumbnail{href: "#"}
+        %img{hb: "mksrc this.images.main"}
+      %p
+        = hb "this.description"

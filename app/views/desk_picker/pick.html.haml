@@ -17,37 +17,37 @@
         %label{for: "computer-group"} Your Computer
         .btn-group.btn-group-justified#computer-group{:'data-toggle' => "buttons"}
           %label.btn.btn-default.active
-            %input#computer-laptop{name: "computer", type: "radio", checked:""} Laptop
+            %input#computer-laptop{name: "computer", type: "radio", checked:"", value:"laptop"}Laptop
           %label.btn.btn-default
-            %input#computer-desktop{name: "computer", type: "radio"} Desktop
+            %input#computer-desktop{name: "computer", type: "radio", value:"desktop"}Desktop
       .form-group
         %label{for: "diy-group"} DIY or Premade
         .btn-group.btn-group-justified#diy-group{:'data-toggle' => "buttons"}
           %label.btn.btn-default
-            %input#diy-yes{name: "diy", type: "radio"} DIY
+            %input#diy-yes{name: "diy", type: "radio", value:"true"} DIY
           %label.btn.btn-default.active
-            %input#diy-no{name: "diy", type: "radio", checked: ""} Premade
+            %input#diy-no{name: "diy", type: "radio", checked: "", value:"false"} Premade
       .form-group
         %label{for: "converter-group"} Sit-to-Stand-Converter or Full Height Desk
         .btn-group.btn-group-justified#converter-group{:'data-toggle' => "buttons"}
           %label.btn.btn-default
-            %input#converter-yes{name: "converter", type: "radio"} Converter
+            %input#converter-yes{name: "converter", type: "radio", value:"true"} Converter
           %label.btn.btn-default.active
-            %input#converter-no{name: "converter", type: "radio", checked: ""} Full Height
+            %input#converter-no{name: "converter", type: "radio", checked: "", value:"false"} Full Height
       .form-group
         %label{for: "adjustable-group"} Fixed Height or Adjustable Height
         .btn-group.btn-group-justified#adjustable-group{:'data-toggle' => "buttons"}
           %label.btn.btn-default
-            %input#adjustable-yes{name: "adjustable", type: "radio"} Fixed Height
+            %input#adjustable-yes{name: "adjustable", type: "radio", value:"false"} Fixed Height
           %label.btn.btn-default.active
-            %input#converter-no{name: "adjustable", type: "radio", checked: ""} Adjustable Height
+            %input#converter-no{name: "adjustable", type: "radio", checked: "", value:"true"} Adjustable Height
       .form-group
         %label{for: "adjustable-group"} Crank or Electrically Adjustable
         .btn-group.btn-group-justified#electric-group{:'data-toggle' => "buttons"}
           %label.btn.btn-default
-            %input#electric-no{name: "electric", type: "radio"} Crank
+            %input#electric-no{name: "electric", type: "radio", value:"false"} Crank
           %label.btn.btn-default.active
-            %input#electric-yes{name: "electric", type: "radio", checked: ""} Electric
+            %input#electric-yes{name: "electric", type: "radio", checked: "", value:"true"} Electric
   .col-md-8.desk-display#desk-display
 -# BASIC option:
 -# Load all images and have them hidden. 
